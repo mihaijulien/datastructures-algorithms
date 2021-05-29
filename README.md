@@ -1,7 +1,7 @@
 ## Datastructures And Algorithms
 Most popular data structures and algorithms
 
-![Build Status](https://travis-ci.com/mihaijulien/DatastructuresAndAlgorithms.svg?token=km1gVT1JBvWs1HJGCSsz&branch=main)
+![Build Status](https://travis-ci.com/mihaijulien/datastructures-algorithms.svg?branch=main)
 ![MIT](https://img.shields.io/github/license/mihaijulien/datastructures-algorithms)
 
 ### Data Structures
