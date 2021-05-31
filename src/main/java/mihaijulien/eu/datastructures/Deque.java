@@ -1,5 +1,11 @@
 package mihaijulien.eu.datastructures;
 
+/**
+ * a double-ended queue (abbreviated to deque, pronounced deck, like "cheque") is an abstract data type that generalizes
+ * a queue, for which elements can be added to or removed from either the front (head) or back (tail).
+ *
+ * @see <a href="https://en.wikipedia.org/wiki/Double-ended_queue">https://en.wikipedia.org/wiki/Double-ended_queue</a>
+ */
 public class Deque<T> {
 
     private T[] deque;
@@ -7,6 +13,9 @@ public class Deque<T> {
 
     private static int MAX_SIZE = 20;
 
+    /**
+     * Instantiates a new Deque.
+     */
     public Deque(){
         deque = (T[]) new Object[MAX_SIZE];
         count = 0;
@@ -14,6 +23,12 @@ public class Deque<T> {
         front = -1;
     }
 
+    /**
+     * Inserts a new element at the front of the deque.
+     *
+     * @param element the element to be inserted in the deque
+     * @return the element inserted
+     */
     public T enqueueFront(T element){
         if(isFull()) {
             throw new IllegalStateException("Deque is full");
@@ -31,6 +46,12 @@ public class Deque<T> {
         return element;
     }
 
+    /**
+     * Inserts a new element at the rear of the deque.
+     *
+     * @param element the element to be inserted in the deque
+     * @return the element inserted
+     */
     public T enqueueRear(T element){
         if(isFull()){
             throw new IllegalStateException("Deque is full");
@@ -46,6 +67,11 @@ public class Deque<T> {
         return element;
     }
 
+    /**
+     * Removes the element at the front of the deque
+     *
+     * @return the removed element
+     */
     public T dequeFront(){
         T tmp;
         if(isEmpty()){
@@ -61,6 +87,11 @@ public class Deque<T> {
         return tmp;
     }
 
+    /**
+     * Removes the element at the rear of the deque
+     *
+     * @return the removed element
+     */
     public T dequeRear(){
         T tmp;
         if(isEmpty()){
@@ -76,22 +107,47 @@ public class Deque<T> {
         return tmp;
     }
 
+    /**
+     * Returns the element at the front of the queue.
+     *
+     * @return the element at the front of the queue
+     */
     public T peekFront(){
         return deque[front];
     }
 
+    /**
+     * Returns the element at the rear of the queue.
+     *
+     * @return the element at the rear of the queue
+     */
     public T peekRear(){
         return deque[rear];
     }
 
+    /**
+     * Returns the size of the deque.
+     *
+     * @return the number of elements in the deque.
+     */
     public int getSize(){
         return count;
     }
 
+    /**
+     * Checks if the deque is empty.
+     *
+     * @return true if the deque is empty
+     */
     public boolean isEmpty(){
         return count == 0;
     }
 
+    /**
+     * Checks if the deque is full.
+     *
+     * @return true if the deque is full.
+     */
     public boolean isFull(){
         return count == MAX_SIZE;
     }
