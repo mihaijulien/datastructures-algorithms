@@ -10,13 +10,13 @@ package mihaijulien.eu.datastructures;
  * <p>Example:
  *
  * <pre>
- *[12] → [99] → [37] → null
+ *[12] ←-→ [99] ←-→ [37] ←-→ null
  * </pre>
  *
  * @see <a href="https://en.wikipedia.org/wiki/Linked_list">https://en.wikipedia.org/wiki/Linked_list</a>
  *
  */
-public class SinglyLinkedList<T> {
+public class LinkedList<T> {
 
     private Node<T> head;
     private Node<T> tail;
@@ -36,9 +36,12 @@ public class SinglyLinkedList<T> {
             head = currentNode;
             tail = currentNode;
             currentNode.next = null;
+            currentNode.prev = null;
         } else {
             head = currentNode;
+            head.prev = currentNode;
             currentNode.next = head;
+            currentNode.prev = null;
         }
         size++;
 
@@ -58,8 +61,10 @@ public class SinglyLinkedList<T> {
             head = currentNode;
             tail = currentNode;
             currentNode.next = null;
+            currentNode.prev = null;
         } else {
             currentNode.next = tail;
+            tail.prev = currentNode;
             tail = currentNode;
         }
         size++;
@@ -156,6 +161,7 @@ public class SinglyLinkedList<T> {
 
     public static class Node<T>{
         private Node<T> next;
+        private Node<T> prev;
         private T value;
 
         public Node(T value){

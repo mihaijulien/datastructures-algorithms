@@ -4,17 +4,17 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SinglyLinkedListTest {
+public class LinkedListTest {
 
     @Test
     public void listIsEmptyTest(){
-        SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         assertTrue(linkedList.isEmpty());
     }
 
     @Test
     public void pushFrontTest(){
-        SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.pushFront(1);
         assertEquals(1, (int) linkedList.getHead());
         assertEquals(1, linkedList.getSize());
@@ -22,14 +22,14 @@ public class SinglyLinkedListTest {
 
     @Test
     public void pushBackTest(){
-        SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.pushBack(2);
         assertEquals(2, (int) linkedList.getTail());
     }
 
     @Test
     public void shouldThrowAnException(){
-        SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         try{
             linkedList.popFront();
             fail("List is already empty");
@@ -40,7 +40,7 @@ public class SinglyLinkedListTest {
 
     @Test
     public void findInListTest(){
-        SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.pushFront(10);
         assertTrue(linkedList.contains(10));
     }
