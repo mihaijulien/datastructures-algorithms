@@ -2,6 +2,8 @@ package mihaijulien.eu.datastructures;
 
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
@@ -33,7 +35,7 @@ public class LinkedListTest {
         try{
             linkedList.popFront();
             fail("List is already empty");
-        } catch(IllegalStateException e){
+        } catch(NoSuchElementException e){
             // expected
         }
     }

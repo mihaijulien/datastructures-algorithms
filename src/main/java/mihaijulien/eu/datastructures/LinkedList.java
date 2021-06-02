@@ -1,5 +1,7 @@
 package mihaijulien.eu.datastructures;
 
+import java.util.NoSuchElementException;
+
 /**
  * A linked list is a linear collection of data elements whose order is not given by their physical placement in memory.
  * Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together
@@ -75,11 +77,11 @@ public class LinkedList<T> {
     /**
      * Removes the element in front of the list.
      *
-     * @throws IllegalStateException if the list is empty
+     * @throws NoSuchElementException if the list is empty
      */
     public void popFront(){
         if(isEmpty()){
-            throw new IllegalStateException("List is already empty");
+            throw new NoSuchElementException();
         } else {
             head = head.next;
         }
@@ -90,11 +92,11 @@ public class LinkedList<T> {
     /**
      * Removes the last element of the list.
      *
-     * @throws IllegalStateException if the list is empty
+     * @throws NoSuchElementException if the list is empty
      */
     public void popBack(){
         if(isEmpty()){
-            throw new IllegalStateException("List is already empty");
+            throw new NoSuchElementException();
         } else {
             tail = tail.next;
         }
