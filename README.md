@@ -9,7 +9,7 @@ Most popular data structures and algorithms
 
 ### Data Structures
 
-* [Linked List](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/LinkedList.java)
+* [Linked List](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/LinkedList.java)
 * [Stack](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Stack.java)
 * [Queue](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Queue.java)
 * [Deque](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Deque.java)
@@ -26,7 +26,7 @@ Most popular data structures and algorithms
 #### Add to your build
 
 To add a dependency using Maven:
-```
+```xml
 <dependency>
   <groupId>io.github.mihaijulien</groupId>
   <artifactId>ds-and-algo</artifactId>
@@ -34,9 +34,17 @@ To add a dependency using Maven:
 </dependency>
 ```
 
+To add a dependency using Gradle:
+```groovy
+implementation 'io.github.mihaijulien:ds-and-algo:1.0.0'
+```
+
 #### Build
 
 `mvn clean install`
+
+#### Generate Changelog
+`git-chglog`
 
 ### License
 
