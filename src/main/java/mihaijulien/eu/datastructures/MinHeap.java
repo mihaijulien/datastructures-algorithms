@@ -2,6 +2,26 @@ package mihaijulien.eu.datastructures;
 
 import java.util.NoSuchElementException;
 
+/**
+ * A Min-Heap is a complete binary tree in which the value in each internal node is smaller than or equal to the values
+ * in the children of that node.
+ * <p>Example:
+ *
+ * <pre>
+ * Array visualization:
+ * [1,3,2,6,5,4]
+ *
+ * Tree visualization:
+ *       1
+ *    /    \
+ *   3      2
+ *  / \    /
+ * 6   5  4
+ * </pre>
+ *
+ * @see <a
+ *  *     href="https://en.wikipedia.org/wiki/Min-max_heap">https://en.wikipedia.org/wiki/Min-max_heap</a>
+ */
 public class MinHeap<T extends Comparable<T>> {
 
     private T[] heap;
@@ -13,6 +33,11 @@ public class MinHeap<T extends Comparable<T>> {
         this.size = 0;
     }
 
+    /**
+     * Returns the current size of the heap
+     *
+     * @return the size of the heap
+     */
     public int getSize(){
         return size;
     }
@@ -43,6 +68,11 @@ public class MinHeap<T extends Comparable<T>> {
         return position > size / 2;
     }
 
+    /**
+     * Insert a new element in the heap.
+     *
+     * @param data the new element to insert
+     */
     public void insert(T data){
         if(size >= MAX_SIZE){
             throw new IllegalStateException("Heap is full");
@@ -56,6 +86,13 @@ public class MinHeap<T extends Comparable<T>> {
         size++;
     }
 
+    /**
+     * Deletes the minimum element.
+     *
+     * @return the deleted element
+     *
+     * @throws NoSuchElementException if the heap is empty
+     */
     public T delete(){
         if(isEmpty()){
             throw new NoSuchElementException("Heap is already empty");
@@ -81,6 +118,9 @@ public class MinHeap<T extends Comparable<T>> {
         }
     }
 
+    /**
+     * Prints the heap.
+     */
     public void printHeap() {
         for (int i = 0; i < (size / 2); i++) {
             System.out.print("Parent : " + heap[i]);
