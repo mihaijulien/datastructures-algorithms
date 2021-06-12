@@ -28,7 +28,7 @@ Most popular data structures and algorithms
 To add a dependency using Maven:
 ```
 <dependency>
-  <groupId>io.github</groupId>
+  <groupId>io.github.mihaijulien</groupId>
   <artifactId>ds-and-algo</artifactId>
   <version>1.0.0</version>
 </dependency>
