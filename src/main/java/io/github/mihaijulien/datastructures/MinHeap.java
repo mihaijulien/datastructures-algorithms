@@ -19,8 +19,7 @@ import java.util.NoSuchElementException;
  * 6   5  4
  * </pre>
  *
- * @see <a
- *  *     href="https://en.wikipedia.org/wiki/Min-max_heap">https://en.wikipedia.org/wiki/Min-max_heap</a>
+ * @see <a href="https://en.wikipedia.org/wiki/Min-max_heap">https://en.wikipedia.org/wiki/Min-max_heap</a>
  */
 public class MinHeap<T extends Comparable<T>> {
 
