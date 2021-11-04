@@ -7,23 +7,33 @@ Most popular data structures and algorithms
 ![GitHub release](https://img.shields.io/github/v/release/mihaijulien/datastructures-algorithms)
 ![Maven](https://img.shields.io/maven-central/v/io.github.mihaijulien/ds-and-algo)
 
-### Data Structures
+## Data Structures
 
 * [Linked List](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/LinkedList.java)
-* [Stack](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Stack.java)
-* [Queue](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Queue.java)
-* [Deque](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Deque.java)
-* [Map](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/Map.java)
-* [MinHeap](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/datastructures/MinHeap.java)
+* [Stack](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Stack.java)
+* [Queue](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Queue.java)
+* [Deque](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Deque.java)
+* [Map](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Map.java)
+* [MinHeap](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/MinHeap.java)
 
-### Algorithms
+## Algorithms
+### Sorting
+* [BubbleSort](https://github.com/mihaijulien/datastructures-algorithms/tree/main/src/main/java/io/github/mihaijulien/algorithms/sorting/BubbleSort.java)
+* [InsertionSort](https://github.com/mihaijulien/datastructures-algorithms/tree/main/src/main/java/io/github/mihaijulien/algorithms/sorting/InsertionSort.java)
+* [QuickSort](https://github.com/mihaijulien/datastructures-algorithms/tree/main/src/main/java/io/github/mihaijulien/algorithms/sorting/QuickSort.java)
+* [SelectionSort](https://github.com/mihaijulien/datastructures-algorithms/tree/main/src/main/java/io/github/mihaijulien/algorithms/sorting/SelectionSort.java)
+* [MergeSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/sorting/MergeSort.java)
+### Strings
+* [PalindromeChecker](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/PalindromeChecker.java)
+* [PermutationMatch](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/PermutationMatch.java)
+* [Reverser](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/Reverser.java)
+* [UniqueCharacters](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/UniqueCharacters.java)
 
-* [BubbleSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/algorithms/sorting/BubbleSort.java)
-* [InsertionSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/algorithms/sorting/InsertionSort.java)
-* [QuickSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/algorithms/sorting/QuickSort.java)
-* [SelectionSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/mihaijulien/eu/algorithms/sorting/SelectionSort.java)
+### Lists
+* [FindKthToLast](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FindKthToLast.java)
+* [RemoveListDuplicates](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/RemoveListDuplicates.java)
 
-#### Add to your build
+## Add to your build
 
 To add a dependency using Maven:
 ```xml
