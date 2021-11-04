@@ -20,8 +20,8 @@ import java.util.NoSuchElementException;
  */
 public class LinkedList<T> {
 
-    private Node<T> head;
-    private Node<T> tail;
+    protected Node<T> head;
+    protected Node<T> tail;
     private Node<T> currentNode;
     private int size;
 
@@ -40,10 +40,10 @@ public class LinkedList<T> {
             currentNode.next = null;
             currentNode.prev = null;
         } else {
-            head = currentNode;
             head.prev = currentNode;
             currentNode.next = head;
             currentNode.prev = null;
+            head = currentNode;
         }
         size++;
 
@@ -65,8 +65,9 @@ public class LinkedList<T> {
             currentNode.next = null;
             currentNode.prev = null;
         } else {
-            currentNode.next = tail;
-            tail.prev = currentNode;
+            tail.next = currentNode;
+            currentNode.prev = tail;
+            currentNode.next = null;
             tail = currentNode;
         }
         size++;
@@ -172,6 +173,10 @@ public class LinkedList<T> {
 
         public T getValue(){
             return this.value;
+        }
+
+        public Node<T> getNext(){
+            return next;
         }
     }
 }
