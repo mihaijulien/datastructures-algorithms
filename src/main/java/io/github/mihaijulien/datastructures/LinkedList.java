@@ -23,7 +23,7 @@ public class LinkedList<T> {
     protected Node<T> head;
     protected Node<T> tail;
     private Node<T> currentNode;
-    private int size;
+    protected int size;
 
     /**
      * Inserts a new element at the beginning of the list
