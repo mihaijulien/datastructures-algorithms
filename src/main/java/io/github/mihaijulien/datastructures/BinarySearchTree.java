@@ -11,6 +11,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     public void insert(T value) {
         root = insert(root, value);
+        size++;
     }
 
     private BinaryNode<T> insert(BinaryNode<T> node, T value) {
@@ -30,6 +31,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     public void delete(T value){
         delete(root, value);
+        size--;
     }
 
     public BinaryNode<T> delete(BinaryNode<T> node, T value){
@@ -53,6 +55,24 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return node;
     }
 
+    public T find(T value){
+        return find(root, value);
+    }
+
+    private T find(BinaryNode<T> node, T value){
+        if(node == null){
+            return null;
+        }
+
+        if(node.getValue().compareTo(value) < 0){
+            return find(node.right, value);
+        }else if(node.getValue().compareTo(value) > 0){
+            return find(node.left, value);
+        } else {
+            return node.getValue();
+        }
+    }
+
     public T findMin(){
         return findMin(root);
     }
@@ -66,6 +86,26 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
 
         return min;
+    }
+
+    public int getTreeHeight(){
+        return getTreeHeight(root);
+    }
+
+    private int getTreeHeight(BinaryNode<T> node){
+        if(node == null){
+            return 0;
+        }
+
+        int left = getTreeHeight(node.left);
+        int right = getTreeHeight(node.right);
+
+        return Math.max(left, right) + 1;
+    }
+
+    public void clear(){
+        root = null;
+        size = 0;
     }
 
     public static class BinaryNode<T extends Comparable<T>> {

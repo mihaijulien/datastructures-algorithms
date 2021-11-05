@@ -39,12 +39,34 @@ public class BinarySearchTreeTest {
     @Test
     public void deleteNodeFromBSTTest(){
         bst.delete(56);
+        assertEquals(null, bst.find(56));
     }
 
     @Test
-    public void checkMinValue(){
+    public void checkMinValueTest(){
         int actual = bst.findMin();
         int expected = 3;
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkHeightOfTreeTest(){
+        int actual = bst.getTreeHeight();
+        int expected = 4;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void findValueTest(){
+        int actual = bst.find(52);
+        int expected = 52;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void clearTest(){
+        bst.clear();
+        assertEquals(0, bst.getTreeHeight());
+        assertEquals(null, bst.find(52));
     }
 }
