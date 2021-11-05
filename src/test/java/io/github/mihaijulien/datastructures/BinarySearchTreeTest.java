@@ -3,6 +3,8 @@ package io.github.mihaijulien.datastructures;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class BinarySearchTreeTest {
 
     BinarySearchTree<Integer> bst = new BinarySearchTree<>();
@@ -37,5 +39,12 @@ public class BinarySearchTreeTest {
     @Test
     public void deleteNodeFromBSTTest(){
         bst.delete(56);
+    }
+
+    @Test
+    public void checkMinValue(){
+        int actual = bst.findMin();
+        int expected = 3;
+        assertEquals(expected, actual);
     }
 }

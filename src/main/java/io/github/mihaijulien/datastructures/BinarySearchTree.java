@@ -53,6 +53,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return node;
     }
 
+    public T findMin(){
+        return findMin(root);
+    }
+
     private T findMin(BinaryNode<T> node){
         T min = node.getValue();
 
