@@ -24,6 +24,7 @@ Most popular data structures and algorithms
 * [QuickSort](https://github.com/mihaijulien/datastructures-algorithms/tree/main/src/main/java/io/github/mihaijulien/algorithms/sorting/QuickSort.java)
 * [SelectionSort](https://github.com/mihaijulien/datastructures-algorithms/tree/main/src/main/java/io/github/mihaijulien/algorithms/sorting/SelectionSort.java)
 * [MergeSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/sorting/MergeSort.java)
+* [HeapSort](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/sorting/HeapSort.java)
 ### Strings
 * [PalindromeChecker](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/PalindromeChecker.java)
 * [PermutationMatch](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/PermutationMatch.java)
