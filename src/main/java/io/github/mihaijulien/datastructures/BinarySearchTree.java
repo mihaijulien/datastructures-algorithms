@@ -2,7 +2,7 @@ package io.github.mihaijulien.datastructures;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 
-    private BinaryNode<T> root;
+    protected BinaryNode<T> root;
     private int size;
 
     public BinarySearchTree() {
