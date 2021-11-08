@@ -45,13 +45,13 @@ To add a dependency using Maven:
 <dependency>
   <groupId>io.github.mihaijulien</groupId>
   <artifactId>ds-and-algo</artifactId>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
 </dependency>
 ```
 
 To add a dependency using Gradle:
 ```groovy
-implementation 'io.github.mihaijulien:ds-and-algo:1.0.0'
+implementation 'io.github.mihaijulien:ds-and-algo:2.0.0'
 ```
 
 #### Build
