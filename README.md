@@ -35,6 +35,9 @@ Most popular data structures and algorithms
 * [FindKthToLast](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FindKthToLast.java)
 * [RemoveListDuplicates](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/RemoveListDuplicates.java)
 
+### Trees
+* [Invert tree](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/InvertTree.java)
+
 ## Add to your build
 
 To add a dependency using Maven:
