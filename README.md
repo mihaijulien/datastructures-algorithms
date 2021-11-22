@@ -31,6 +31,9 @@ Most popular data structures and algorithms
 * [Reverser](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/Reverser.java)
 * [UniqueCharacters](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/UniqueCharacters.java)
 
+### Stacks
+* [MinStack](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/stacks/MinStack.java)
+
 ### Lists
 * [FindKthToLast](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FindKthToLast.java)
 * [RemoveListDuplicates](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/RemoveListDuplicates.java)
