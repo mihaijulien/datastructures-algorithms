@@ -33,13 +33,17 @@ Most popular data structures and algorithms
 
 ### Stacks
 * [MinStack](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/stacks/MinStack.java)
+* [BalancedBrackets](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/stacks/BalancedBrackets.java)
 
 ### Lists
 * [FindKthToLast](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FindKthToLast.java)
 * [RemoveListDuplicates](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/RemoveListDuplicates.java)
+* [FloydCycleDetection](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FloydCycleDetection.java)
 
 ### Trees
 * [Invert tree](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/InvertTree.java)
+* [Left View](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/LeftView.java)
+* [Right View](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/RightView.java)
 
 ## Add to your build
 
