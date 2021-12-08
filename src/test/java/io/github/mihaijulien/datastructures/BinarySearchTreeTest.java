@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class BinarySearchTreeTest {
 
@@ -39,7 +40,7 @@ public class BinarySearchTreeTest {
     @Test
     public void deleteNodeFromBSTTest(){
         bst.delete(56);
-        assertEquals(null, bst.find(56));
+        assertNull(bst.find(56));
     }
 
     @Test
