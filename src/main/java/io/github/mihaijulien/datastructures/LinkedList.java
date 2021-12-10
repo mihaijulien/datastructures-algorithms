@@ -178,5 +178,13 @@ public class LinkedList<T> {
         public Node<T> getNext(){
             return next;
         }
+
+        public void setNext(Node<T> next) {
+            this.next = next;
+        }
+
+        public void setValue(T value) {
+            this.value = value;
+        }
     }
 }
