@@ -16,6 +16,7 @@ Most popular data structures and algorithms
 * [Map](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Map.java)
 * [MinHeap](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/MinHeap.java)
 * [Binary Search Tree](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/BinarySearchTree.java)
+* [Trie](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Trie.java)
 
 ## Algorithms
 ### Sorting
@@ -31,6 +32,9 @@ Most popular data structures and algorithms
 * [Reverser](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/Reverser.java)
 * [UniqueCharacters](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/strings/UniqueCharacters.java)
 
+### Arrays
+* [Check if array is sorted](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/arrays/ArraySorted.java)
+
 ### Stacks
 * [MinStack](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/stacks/MinStack.java)
 * [BalancedBrackets](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/stacks/BalancedBrackets.java)
@@ -39,6 +43,7 @@ Most popular data structures and algorithms
 * [FindKthToLast](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FindKthToLast.java)
 * [RemoveListDuplicates](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/RemoveListDuplicates.java)
 * [FloydCycleDetection](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/FloydCycleDetection.java)
+* [List Intersection](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/lists/ListIntersection.java)
 
 ### Trees
 * [Invert tree](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/InvertTree.java)
