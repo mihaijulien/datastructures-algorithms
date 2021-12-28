@@ -1,47 +1,35 @@
 package io.github.mihaijulien.datastructures;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import io.github.mihaijulien.datastructures.util.TrieNode;
 
 public class Trie {
     private TrieNode root;
     private static final int CHAR_SIZE = 26;
 
-    class TrieNode{
-        private boolean isLeaf;
-        private List<TrieNode> children;
-
-        public TrieNode(){
-            this.isLeaf = false;
-            this.children = new ArrayList<>(Collections.nCopies(CHAR_SIZE, null));
-        }
-    }
-
     public Trie(){
-        this.root = new TrieNode();
+        this.root = new TrieNode(CHAR_SIZE);
     }
 
     public void insert(String word){
         TrieNode current = this.root;
         for(char c : word.toCharArray()){
-            if(current.children.get(c - 'a') == null){
-                current.children.set(c - 'a', new TrieNode());
+            if(current.getChildren().get(c - 'a') == null){
+                current.getChildren().set(c - 'a', new TrieNode(CHAR_SIZE));
             }
-            current = current.children.get(c - 'a');
+            current = current.getChildren().get(c - 'a');
         }
 
-        current.isLeaf = true;
+        current.setLeaf(true);
     }
 
     public boolean search(String word){
         TrieNode current = this.root;
         for(char c : word.toCharArray()){
-            current = current.children.get(c - 'a');
+            current = current.getChildren().get(c - 'a');
             if(current == null){
                 return false;
             }
         }
-        return current.isLeaf;
+        return current.isLeaf();
     }
 }

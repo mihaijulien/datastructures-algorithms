@@ -1,6 +1,7 @@
 package io.github.mihaijulien.algorithms.lists;
 
 import io.github.mihaijulien.datastructures.LinkedList;
+import io.github.mihaijulien.datastructures.util.ListNode;
 
 public class FloydCycleDetection<T> extends LinkedList<T> {
 
@@ -8,13 +9,13 @@ public class FloydCycleDetection<T> extends LinkedList<T> {
         return hasCycle(head);
     }
 
-    public boolean hasCycle(Node<T> head){
+    public boolean hasCycle(ListNode<T> head){
         if(head == null){
             return false;
         }
 
-        Node<T> slow = head;
-        Node<T> fast = head;
+        ListNode<T> slow = head;
+        ListNode<T> fast = head;
 
         // the fast pointer moving twice as fast will catch the slow pointer
         // if there's a loop

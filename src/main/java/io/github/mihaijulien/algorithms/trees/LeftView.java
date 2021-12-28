@@ -1,6 +1,7 @@
 package io.github.mihaijulien.algorithms.trees;
 
 import io.github.mihaijulien.datastructures.BinarySearchTree;
+import io.github.mihaijulien.datastructures.util.BinaryNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

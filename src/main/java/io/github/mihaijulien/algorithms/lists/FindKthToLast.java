@@ -1,6 +1,7 @@
 package io.github.mihaijulien.algorithms.lists;
 
 import io.github.mihaijulien.datastructures.LinkedList;
+import io.github.mihaijulien.datastructures.util.ListNode;
 
 /*
     Finds the kth to last element of a singly linked list and returns it.
@@ -22,8 +23,8 @@ public class FindKthToLast<T> extends LinkedList<T> {
         In that situation, the first pointer is at the end of the list, but the second pointer would have only reached till Kth element – this is what you want
 */
 
-        Node<T> firstRunner = head;
-        Node<T> secondRunner = head;
+        ListNode<T> firstRunner = head;
+        ListNode<T> secondRunner = head;
 
         while(i != kth){
             // list is smaller than k
