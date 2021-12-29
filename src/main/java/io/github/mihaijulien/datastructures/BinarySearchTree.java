@@ -1,7 +1,5 @@
 package io.github.mihaijulien.datastructures;
 
-import io.github.mihaijulien.datastructures.util.BinaryNode;
-
 public class BinarySearchTree<T extends Comparable<T>> {
 
     protected BinaryNode<T> root;
@@ -22,9 +20,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
 
         if (node.getValue().compareTo(value) > 0) {
-            node.setLeft(insert(node.getLeft(), value));
+            node.left = insert(node.left, value);
         } else if (node.getValue().compareTo(value) < 0) {
-            node.setRight(insert(node.getRight(), value));
+            node.right = insert(node.right, value);
         } else {
             return node;
         }
@@ -40,19 +38,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(node == null){
             return node;
         } else if(node.getValue().compareTo(value) > 0){
-            node.setLeft(delete(node.getLeft(), value));
+            node.left = delete(node.left, value);
         } else if(node.getValue().compareTo(value) < 0){
-            node.setRight(delete(node.getRight(), value));
+            node.right = delete(node.right, value);
         } else {
 
-            if(node.getLeft() == null){
-                return node.getRight();
-            } else if( node.getRight() == null){
-                return node.getLeft();
+            if(node.left == null){
+                return node.right;
+            } else if( node.right == null){
+                return node.left;
             }
 
-            node.setValue((T) findMin(node.getRight()));
-            node.setRight(delete(node.getRight(), node.getValue()));
+            node.setValue(findMin(node.right));
+            node.right = delete(node.right, node.getValue());
         }
         return node;
     }
@@ -67,9 +65,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
 
         if(node.getValue().compareTo(value) < 0){
-            return (T) find(node.getRight(), value);
+            return find(node.right, value);
         }else if(node.getValue().compareTo(value) > 0){
-            return (T) find(node.getLeft(), value);
+            return find(node.left, value);
         } else {
             return node.getValue();
         }
@@ -82,9 +80,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
     private T findMin(BinaryNode<T> node){
         T min = node.getValue();
 
-        while(node.getLeft() != null){
-            min = (T) node.getLeft().getValue();
-            node = node.getLeft();
+        while(node.left != null){
+            min = node.left.getValue();
+            node = node.left;
         }
 
         return min;
@@ -99,8 +97,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return 0;
         }
 
-        int left = getTreeHeight(node.getLeft());
-        int right = getTreeHeight(node.getRight());
+        int left = getTreeHeight(node.left);
+        int right = getTreeHeight(node.right);
 
         return Math.max(left, right) + 1;
     }
@@ -108,5 +106,39 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public void clear(){
         root = null;
         size = 0;
+    }
+
+    public static class BinaryNode<T extends Comparable<T>> {
+        private T value;
+        private BinaryNode<T> right;
+        private BinaryNode<T> left;
+
+        public BinaryNode(T value) {
+            this.value = value;
+        }
+
+        public T getValue() {
+            return value;
+        }
+
+        public void setValue(T value) {
+            this.value = value;
+        }
+
+        public BinaryNode getRight() {
+            return right;
+        }
+
+        public void setRight(BinaryNode right) {
+            this.right = right;
+        }
+
+        public BinaryNode getLeft() {
+            return left;
+        }
+
+        public void setLeft(BinaryNode left) {
+            this.left = left;
+        }
     }
 }

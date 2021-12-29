@@ -1,6 +1,6 @@
 package io.github.mihaijulien.algorithms.lists;
 
-import io.github.mihaijulien.datastructures.util.ListNode;
+import io.github.mihaijulien.datastructures.LinkedList.Node;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,44 +18,44 @@ public class ListIntersectionTest {
 
     @Test
     public void testOneListEmpty(){
-        ListNode<String> headA = null;
-        ListNode<String> headB = new ListNode<>("a");
+        Node<String> headA = null;
+        Node<String> headB = new Node<>("a");
 
         assertNull(list.getIntersectionNode(headA, headB));
     }
 
     @Test
     public void testBothListsEmpty() {
-        ListNode<String> headA = null;
-        ListNode<String> headB = null;
+        Node<String> headA = null;
+        Node<String> headB = null;
 
         assertNull(list.getIntersectionNode(headA, headB));
     }
 
     @Test
     public void testOneElementNoIntersection() {
-        ListNode<String> headA = new ListNode<>("a");
-        ListNode<String> headB = new ListNode<>("a");
+        Node<String> headA = new Node<>("a");
+        Node<String> headB = new Node<>("a");
 
         assertEquals(list.getIntersectionNode(headA, headB), null);
     }
 
     @Test
     public void testOneElementWithIntersection() {
-        ListNode<String> headA = new ListNode<>("a");
-        ListNode<String> headB = headA;
+        Node<String> headA = new Node<>("a");
+        Node<String> headB = headA;
 
         assertEquals(list.getIntersectionNode(headA, headB), headB);
     }
 
     @Test
     public void testIntersection() {
-        ListNode<String> headA = new ListNode<>("a");
-        ListNode<String> headB = new ListNode<>("a");
-        ListNode<String> nextA = new ListNode<>("b");
-        ListNode<String> nextB = new ListNode<>("c");
-        ListNode<String> intersection = new ListNode<>("c");
-        ListNode<String> last = new ListNode<>("d");
+        Node<String> headA = new Node<>("a");
+        Node<String> headB = new Node<>("a");
+        Node<String> nextA = new Node<>("b");
+        Node<String> nextB = new Node<>("c");
+        Node<String> intersection = new Node<>("c");
+        Node<String> last = new Node<>("d");
 
         headA.setNext(nextA);
         headB.setNext(nextB);

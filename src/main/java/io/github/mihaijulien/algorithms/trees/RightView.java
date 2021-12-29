@@ -1,7 +1,6 @@
 package io.github.mihaijulien.algorithms.trees;
 
 import io.github.mihaijulien.datastructures.BinarySearchTree;
-import io.github.mihaijulien.datastructures.util.BinaryNode;
 
 public class RightView <T extends Comparable<T>> extends BinarySearchTree<T> {
 

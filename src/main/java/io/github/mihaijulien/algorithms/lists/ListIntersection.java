@@ -1,6 +1,6 @@
 package io.github.mihaijulien.algorithms.lists;
 
-import io.github.mihaijulien.datastructures.util.ListNode;
+import io.github.mihaijulien.datastructures.LinkedList.Node;
 
 public class ListIntersection<T> {
 
@@ -14,7 +14,7 @@ public class ListIntersection<T> {
     Then we can traverse both the lists in parallel till we come across a common node. (Note that getting a common node is done by comparing the address of the nodes)
     *
     * */
-    public ListNode<T> getIntersectionNode(ListNode<T> headListA, ListNode<T> headListB){
+    public Node<T> getIntersectionNode(Node<T> headListA, Node<T> headListB){
 
         if (headListA == null || headListB == null) {
             return null;
@@ -29,8 +29,8 @@ public class ListIntersection<T> {
             return null;
         }
 
-        ListNode<T> longer = resultA.size > resultB.size ? headListA : headListB;
-        ListNode<T> shorter = resultA.size > resultB.size ? headListB : headListA;
+        Node<T> longer = resultA.size > resultB.size ? headListA : headListB;
+        Node<T> shorter = resultA.size > resultB.size ? headListB : headListA;
 
         int difference = Math.abs(resultA.size - resultB.size);
 
@@ -49,13 +49,13 @@ public class ListIntersection<T> {
         return longer;
     }
 
-    private Result<T> getLastNodeAndSize(ListNode<T> start) {
+    private Result<T> getLastNodeAndSize(Node<T> start) {
         if (start == null) {
             return new Result<>(null, 0);
         }
 
         int size = 1;
-        ListNode<T> current = start;
+        Node<T> current = start;
         while (current.getNext() != null) {
             current = current.getNext();
             size++;
@@ -65,10 +65,10 @@ public class ListIntersection<T> {
     }
 
     class Result<T> {
-        ListNode<T> node;
+        Node<T> node;
         int size;
 
-        public Result(ListNode<T> node, int size) {
+        public Result(Node<T> node, int size) {
             this.node = node;
             this.size = size;
         }

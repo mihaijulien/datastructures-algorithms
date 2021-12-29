@@ -1,7 +1,5 @@
 package io.github.mihaijulien.datastructures;
 
-import io.github.mihaijulien.datastructures.util.ListNode;
-
 import java.util.NoSuchElementException;
 
 /**
@@ -22,9 +20,9 @@ import java.util.NoSuchElementException;
  */
 public class LinkedList<T> {
 
-    protected ListNode<T> head;
-    protected ListNode<T> tail;
-    private ListNode<T> currentNode;
+    protected Node<T> head;
+    protected Node<T> tail;
+    private Node<T> currentNode;
     protected int size;
 
     /**
@@ -34,17 +32,17 @@ public class LinkedList<T> {
      * @return the inserted element
      */
     public T pushFront(T value){
-        currentNode = new ListNode<>(value);
+        currentNode = new Node<>(value);
 
         if(isEmpty()){
             head = currentNode;
             tail = currentNode;
-            currentNode.setNext(null);
-            currentNode.setPrev(null);
+            currentNode.next = null;
+            currentNode.prev = null;
         } else {
-            head.setPrev(currentNode);
-            currentNode.setNext(head);
-            currentNode.setPrev(null);
+            head.prev = currentNode;
+            currentNode.next = head;
+            currentNode.prev = null;
             head = currentNode;
         }
         size++;
@@ -59,17 +57,17 @@ public class LinkedList<T> {
      * @return the inserted element
      */
     public T pushBack(T value){
-        currentNode = new ListNode<>(value);
+        currentNode = new Node<>(value);
 
         if(isEmpty()){
             head = currentNode;
             tail = currentNode;
-            currentNode.setNext(null);
-            currentNode.setPrev(null);
+            currentNode.next = null;
+            currentNode.prev = null;
         } else {
-            tail.setNext(currentNode);
-            currentNode.setPrev(tail);
-            currentNode.setNext(null);
+            tail.next = currentNode;
+            currentNode.prev = tail;
+            currentNode.next = null;
             tail = currentNode;
         }
         size++;
@@ -86,7 +84,7 @@ public class LinkedList<T> {
         if(isEmpty()){
             throw new NoSuchElementException();
         } else {
-            head = head.getNext();
+            head = head.next;
         }
 
         size--;
@@ -101,7 +99,7 @@ public class LinkedList<T> {
         if(isEmpty()){
             throw new NoSuchElementException();
         } else {
-            tail = tail.getNext();
+            tail = tail.next;
         }
 
         size--;
@@ -121,7 +119,7 @@ public class LinkedList<T> {
                 if(head.getValue() == value){
                     return true;
                 }
-                head = head.getNext();
+                head = head.next;
             }
         }
 
@@ -162,5 +160,31 @@ public class LinkedList<T> {
      */
     public T getTail(){
         return tail.getValue();
+    }
+
+    public static class Node<T>{
+        private Node<T> next;
+        private Node<T> prev;
+        private T value;
+
+        public Node(T value){
+            this.value = value;
+        }
+
+        public T getValue(){
+            return this.value;
+        }
+
+        public Node<T> getNext(){
+            return next;
+        }
+
+        public void setNext(Node<T> next) {
+            this.next = next;
+        }
+
+        public void setValue(T value) {
+            this.value = value;
+        }
     }
 }
