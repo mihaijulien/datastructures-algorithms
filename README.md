@@ -17,6 +17,7 @@ Most popular data structures and algorithms
 * [MinHeap](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/MinHeap.java)
 * [Binary Search Tree](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/BinarySearchTree.java)
 * [Trie](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Trie.java)
+* [Graph](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/datastructures/Graph.java)
 
 ## Algorithms
 ### Sorting
