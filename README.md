@@ -50,6 +50,7 @@ Most popular data structures and algorithms
 * [Invert tree](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/InvertTree.java)
 * [Left View](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/LeftView.java)
 * [Right View](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/RightView.java)
+* [Serialize/Deserialize BST to String](https://github.com/mihaijulien/datastructures-algorithms/blob/main/src/main/java/io/github/mihaijulien/algorithms/trees/Codec.java)
 
 ## Add to your build
 
