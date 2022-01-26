@@ -7,7 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Codec<T extends Comparable<T>> extends BinarySearchTree<T> {
-    public String serialize(BinaryNode<T> root, StringBuilder stringBuilder) {
+
+    private String serialize(BinaryNode<T> root, StringBuilder stringBuilder) {
         if (root == null) {
             stringBuilder.append("None,");
         } else {
@@ -23,7 +24,7 @@ public class Codec<T extends Comparable<T>> extends BinarySearchTree<T> {
         return serialize(root, new StringBuilder());
     }
 
-    public BinaryNode<T> deserialize(List<String> list) {
+    private BinaryNode<T> deserialize(List<String> list) {
 
         if (list.get(0).equals("None")) {
             list.remove(0);
@@ -41,7 +42,7 @@ public class Codec<T extends Comparable<T>> extends BinarySearchTree<T> {
     // Decodes the encoded data to tree.
     public BinaryNode<T> deserialize(String data) {
         String[] dataArray = data.split(",");
-        List<String> data_list = new LinkedList<>(Arrays.asList(dataArray));
-        return deserialize(data_list);
+        List<String> dataList = new LinkedList<>(Arrays.asList(dataArray));
+        return deserialize(dataList);
     }
 }
